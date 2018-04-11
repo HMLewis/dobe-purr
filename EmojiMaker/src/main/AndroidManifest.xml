@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.aviary.hlewis.emoji">
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+	<!-- billing permission -->
+	<!-- mandatory for PCN partners -->
+	<!-- <uses-permission android:name="com.android.vending.BILLING" /> -->
+
+	<!-- optional permissions -->
+	<!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+
+	<application
+		android:allowBackup="true"
+		android:label="@string/app_name"
+		android:icon="@drawable/app_icon"
+		android:hardwareAccelerated="true"
+		android:theme="@style/AppTheme"
+		android:name=".AviaryEnabler">
+
+		<activity
+			android:name=".ImageEditor"
+			android:label="@string/app_name"
+			android:screenOrientation="unspecified">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+
+		</activity>
+
+		<!--
+			Required by the CreativeSDKImage
+			The "android:authorities" property MUST follow the following rule:
+				{your_app_package_name}.AviaryCdsProvider
+		-->
+		<provider
+			android:name="com.aviary.android.feather.sdk.internal.cds.AviaryCdsProvider"
+			android:authorities="com.aviary.hlewis.emoji.AviaryCdsProvider"
+			android:process=":aviarycds"
+			android:exported="false" />
+
+
+	</application>
+
+</manifest>

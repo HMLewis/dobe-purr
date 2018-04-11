@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:baselineAligned="true"
+	android:gravity="center_horizontal"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_weight="1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+
+		<LinearLayout
+			android:background="@drawable/image_borders"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:id="@+id/image_container"
+			android:padding="5dp"
+            android:weightSum="1">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/tap_to_change"
+				android:scaleType="centerInside"
+				android:id="@+id/image"
+                android:layout_weight="0.49" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+        android:padding="10dp"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:background="@drawable/buttonshape"
+            android:text="Take a picture"
+            android:textColor="#000000"
+            android:padding="10.0dip"
+            android:id="@+id/cameraButton"
+            android:layout_width="170dp"
+            android:layout_height="64dp"
+            android:elegantTextHeight="false"
+            android:clickable="true" />
+
+        <Button
+            android:background="@drawable/buttonshape"
+            android:text="Launch Editor"
+            android:textColor="#000000"
+            android:padding="10.0dip"
+            android:id="@+id/editButton"
+            android:layout_width="170dp"
+            android:layout_height="64dp"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:background="@drawable/buttonshape"
+            android:text="Replace an Emoji"
+            android:textColor="#000000"
+            android:padding="10.0dip"
+            android:id="@+id/replaceButton"
+            android:layout_width="170dp"
+            android:layout_height="64dp"
+            android:elegantTextHeight="false"
+            android:clickable="true" />
+
+        <Button
+            android:background="@drawable/buttonshape"
+            android:text="Share Emoji"
+            android:textColor="#000000"
+            android:padding="10.0dip"
+            android:id="@+id/shareButton"
+            android:layout_width="170dp"
+            android:layout_height="64dp"
+            android:elegantTextHeight="false"
+            android:clickable="true" />
+
+    </LinearLayout>
+</LinearLayout>
